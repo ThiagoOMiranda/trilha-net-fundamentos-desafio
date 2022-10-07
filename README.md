@@ -1,15 +1,37 @@
-# DIO - Trilha .NET - Fundamentos
-www.dio.me
+<h1 align="center" >DIO - Trilha .NET - Fundamentos</h1>
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+<p align="center"><b>PROJETO EDUCACIONAL PARA O BOOTCAMP DA DIO: </b>
 
-## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+**Desenvolvido por:** _Thiago de Oliveira Miranda_
 
-## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+</p>
+
+---
+
+<br>
+
+## **Desafio de projeto**
+
+&emsp;&emsp;Para este desafio, foi necessário usar os conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+
+<br>
+
+## **Contexto**
+
+&emsp;&emsp;Você foi contratado para construir um sistema para um **_estacionamento_**, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo **_adicionar um veículo_**, **_remover um veículo_** (**_exibir o valor cobrado_** durante o período) e **_listar os veículos_**.
+
+<br>
+
+## **Proposta**
+
+&emsp;&emsp;Construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
+
+<br>
+<p align="center"><img width="450" src="diagrama_classe_estacionamento_modificado.png"/></p>
+
+<p align="center"><i>Figura 01: Diagrama da classe Estacionamento.</i></p>
+
+<br>
 
 A classe contém três variáveis, sendo:
 
@@ -19,20 +41,49 @@ A classe contém três variáveis, sendo:
 
 **veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
 
-A classe contém três métodos, sendo:
+A classe continha inicialmente três métodos, sendo:
 
 **AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
 
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
+**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** \* **precoPorHora**, exibindo para o usuário.
 
 **ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
+<span style="color: red;">**ValidarPlaca:**</span> Verifica se a placa foi inserida respeitando o padrão Mercosul: **AAA - 0A00**. Foi utilizada a biblioteca **_Regex_** com o parâmetro: **[A-Z]{3}-[0-9][0-9a-z][0-9]{2}** para a validação.
 
+<span style="color: red;">**ContadorVeiculos:**</span> Verifica se há veículos no estacionamento e armazena a informação em uma variável.
+
+Por último, foi feito um menu interativo com as seguintes ações implementadas:
+
+<br>
+
+Preço inicial = R$ 0,00
+
+Preço por hora adicional = R$ 0,00
+
+<br>
+
+0 veículos estacionados.
+
+<p>_____________________________________</p>
+
+<br>
+
+<p>1) &nbsp; - &nbsp; Cadastrar veículo.</p>
+<p>2) &nbsp; - &nbsp; Remover veículo.</p>
+<p>3) &nbsp; - &nbsp; Listar veículos.</p>
+<p>4) &nbsp; - &nbsp; Encerrar.</p>
+
+<br>
 
 ## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+&emsp;&emsp;Foram implementadas todas as soluções requisitadas no desafio, e outras soluções também foram exploradas para fins de aprendizado:
+
+- [<span style="color: green;">**x**</span>] &emsp; Validação dos inputs do usuário, evitando dados nulos, vazios ou inválidos.
+
+- [<span style="color: green;">**x**</span>] &emsp; Validação do input de placa dos veículos no padrão nacional.
+
+- [<span style="color: green;">**x**</span>] &emsp; Informações de **_Preço inicial_**, **_Preço por hora_** e **_Número de veículos_** no menu principal.
+
+* [<span style="color: green;">**x**</span>] &emsp; Lista de veículos no menu de **_Remover veículos_**.
